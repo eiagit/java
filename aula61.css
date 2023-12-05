@@ -1,0 +1,59 @@
+
+#{
+padding: 0px;
+margin: 0px;
+border :none;
+box-sizing: border-box;
+font-size: larger;
+}
+.carros{
+    display: flex;
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+.carro{
+    display: table-cell;
+    width: 400px;
+    background-color: #ffcdcd;
+    border: 3px solid #ff0000;
+    border-radius: 5px;
+    padding: 5px;    
+}
+.ncarro{
+    display: inline-block;
+    width:  auto;
+    height: fit-content;
+    background-color: rgb(252, 213, 213);
+    border: 2px solid rgb(38, 0, 255);
+    border-radius: 5px;
+    padding: 5px;    
+}
+.maskedit{
+    width : 15rem;
+    border-radius: 5px;
+}
+.btn{
+    width :7rem;
+    border-radius: 5px;
+    margin: none;
+    border-width: 0;
+    outline: 2px;
+    outline-style: solid;
+    outline-width: 1px blue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.bta{
+    width :6rem;
+    border-radius: 5px;
+    margin: none;
+    border-width: 0;
+    outline: 2px;
+    outline-style: solid;
+    outline-color: rgb(255, 0, 0);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

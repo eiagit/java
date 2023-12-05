@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+</head>
+<body>
+    exemplo java
+   <script> 
+       console.log('olá mundo'); 
+       let a = 'Ennio';
+       console.log(a);
+       console.time();
+       if (a==true) {console.log("Eke disse sim");} 
+       else {console.log('ele deixou nao')};
+       console.log('fim do script'); 
+       document.body.innerHTML='Escrva ess merda<br>';
+       let b = '10';
+       let c = Number.parseInt(b);
+       let f = c+20.5;
+       let d = Number(b);
+       let s = c.toString();
+       let v = String(c);
+       let k = `transformei com tostring ${s} e com string puro ${v}`;
+       console.log(`transformei com tostring ${s} e com string puro ${v}`) // templete string ${} place holder
+       console.log(k.toUpperCase());
+       console.log(k.length)
+       document.write('<br> '+k);
+       let g = f.toFixed(2).replace('.',',');
+       console.log(typeof(g));
+       console.log(g)
+       let n1 = 30.45;
+       g.toLocaleString('pt-BR',{style : 'currency',currency : 'BLR' });
+       n1.toLocaleString('pt-BR',{style : 'currency' , currency : 'BLR'});
+       document.write('<br>'+n1.toLocaleString('pt-BR',{style : 'currency' , currency : 'BLR'}));
+       SS='<br>'+n1.toLocaleString('pt-BR',{style : 'currency', currency : 'BRL'});
+       document.write(SS);
+       console.log(5===5)
+       console.log('precedência lógica')
+       console.log(!4==4); // not
+       console.log(4==4 && 4>3); // and
+       console.log(4==5 || 4>4); // or
+// operador ternario ? : 
+        console.log(n1>40 ? 'é maior':'é menor');
+        
+
+
+   </script>
+</body>
+</html>

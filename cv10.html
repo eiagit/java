@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            font : normal 20pt arial;
+            background-color: rgb(155, 155, 255);
+            color : white;
+            width : 400px;
+            height : 150px;
+            line-height: 150px;
+            word-wrap :normal;
+            text-align: center;
+        }
+        div#fuba{
+         background-color: rgb(255, 196, 0);
+         color : red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="area" onclick="clicar()" onmouseenter="mudaCor()" onmouseout="fundoAzul()" > -->
+    <div id="area">   
+        interaja
+       <BR> ENNIO DE JESUS
+    </div>
+    <script>
+        
+    let xx = window.document.querySelector('div#area');
+    console.log(document.querySelector('div#area').style.cssText);
+    window.document.write('<br><br><br><br>'+xx.style.cssText);
+
+//   let xx = window.document.getElementById('area');
+//    xx.style.backgroundColor='blue';
+
+    xx.addEventListener('click',clicar);
+    xx.addEventListener('mouseenter',mudaCor);
+    xx.addEventListener('mouseout',fundoAzul);
+    
+    function mudaCor() {xx.style.backgroundColor ='red'};
+    function fundoAzul(){
+        xx.innerText='Italva';
+        xx.style.setProperty("color", 'blue');
+        let zz=document.querySelector('div#fuba');
+        console.log(zz);
+      //  console.log(xx.style.cssText);
+     //   xx.style.setProperty('backgroundColor','yelow');
+        //window.document.write('<br><br><br>'+window.documsent.getElementsByClassName)
+    };
+    function clicar() {
+        xx.style.backgroundColor='black';
+        xx.innerText='Ennio';
+    };
+    </script> 
+</body>
+</html>

@@ -1,0 +1,56 @@
+.div_mae{
+border-radius: 8px;
+display: grid;
+width: 31rem;
+}
+.entradas{
+border-radius: 8px;
+height: 1.8rem;
+width : 25rem;
+margin-top: 8px;
+}
+.la{
+    display: table-cell;
+}
+.botao{
+border-radius: 8px;
+background-color: rgb(55, 55, 252);
+color: white;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+height: 1.8rem;
+width : 12.6rem;
+border :0;
+margin-top: 8px;
+}
+.div_dados{
+width: 30rem;
+outline-width: 2px;
+outline-style: solid;
+padding: 5px 5px;
+border-radius: 8px;
+display: table-cell;
+}
+.div_result{
+background-color: rgb(231, 255, 255);
+border-radius: 8px;
+outline-style: solid;
+outline-width: 2px;
+width: 30rem;
+height: auto;
+padding: 5px 5px;
+display: table-cell;
+}
+.dados{
+    background-color: rgb(205, 231, 231);
+    border-radius: 8px;
+    outline-style: solid;
+    outline-width: 2px;
+    width: 12rem;
+    height: auto;
+    padding: 7px;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    ;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 12pt;
+            color :blue;
+        }
+        div#dados{
+            width: 300;
+            height: 300;
+            background-color: rgb(190, 190, 190);
+        }
+        div#result{
+            position: absolute;
+            width: 200;
+            height: 100;
+            background-color: rgb(211, 255, 240);
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .entrada{
+            width : 150;
+        }  
+        .button { 
+            margin-left : 10px;
+            background-color: Transparent;
+            border-radius: 9px;
+            border-bottom: 1px;
+            border-style :double ; 
+            border : 1 px ;
+            border-color :rgba(241, 117, 0, 255);
+            color: rgba(241, 117, 0, 255);
+            height: 25pt;
+            width : 50pt;
+            background-repeat: round;         
+            cursor:pointer;
+            overflow: hidden;       
+        }        
+    </style>
+</head>
+<body>
+    <div id="dados">
+        <h1> Programa de Calculo</h1>
+        Entre com informação 1:<input class = "entrada" type="text" id="MaskEdit1" name="MaskEdit1"><br>
+        Entre com informação 2:<input class = "entrada" type="text" id="MaskEdit2" name="MaskEdit2"><br>
+        <br><input class='button' type="button" value="Somar" id="Btn1" onclick="somar()">
+        <br><br>
+    </div>
+    
+    <div id = "result">
+        <br>Resutado : 
+        <br>
+       
+    </div>     
+    <script>
+        let but = window.document.getElementById('Btn1');
+        but.addEventListener('mouseenter',btentra);
+        but.addEventListener('mouseout',btsai);
+        function btentra(){
+            this._boot=but; 
+           but.style.backgroundColor='black'
+           but.style.backgroundColor = 'rgba(241,117,0,100)'; 
+           but.style.backgroundColor = 'white'; 
+           setTimeout(()=>{but.style.backgroundColor = 'rgba(241,117,0,100)'},30);
+           but.style.color = 'white'
+           
+        }
+        function btsai(){
+            but.style.backgroundColor = 'Transparent';
+            but.style.color='rgba(241, 117, 0, 255)'
+                                         
+        }
+        
+        function somar(){
+        let me1 = Number(window.document.getElementById("MaskEdit1").value);
+        let me2 = Number(window.document.getElementById("MaskEdit2").value);
+        let Resultado = me1 + me2;
+        //window.document.write(`O resutado foi ${Resultado}`);
+        res = window.document.getElementById("result");
+        res.innerHTML = `O resutado foi ${Resultado}`;
+        let agora = new Date();
+        let din = agora.getDay();
+        res.innerHTML += '<br>'+agora.getDate();
+        var num ;
+        switch(Resultado){
+            case 10 : num='o numero foi 10' ; break;
+            case 20 : num='o numero foi 20';break;
+            case 35 : num='o numero foi 35';break;
+            default : num=`o numero digitado foi ${Resultado}`;break;
+        }
+        let dis =[];
+        dis[0]='Domingo';
+        dis[1]='Segunda';
+        dis[2]='Terça';
+        dis[3]='Quarta';
+        dis[4]='Quinta';
+        dis[5]='Sexta';
+        dis[6]='Sábado';
+        res.innerHTML += '<br> '+num+` e o dia é ${dis[din]}`;
+            var img = document.createElement("IMG");
+            img.src = "https://alvarotrigo.com/blog/assets/imgs/2022-03-28/modify-css-with-javascript.jpeg";
+            img.style.width = "120px";
+            img.style.height = "60px";
+            document.getElementById('result').appendChild(img);
+    }
+        
+   </script> 
+</body>
+</html>

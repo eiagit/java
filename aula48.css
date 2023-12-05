@@ -1,0 +1,49 @@
+.array{
+background-color: rgb(185, 253, 231);
+height: 6rem;
+width: 27rem;
+outline-width: 2px;
+outline-style: solid;
+display: block;
+border-radius: 10px;
+border: none;
+padding: 8px;
+}
+.pesquisa{
+    background-color: rgb(185, 243, 253);
+    height: 6rem;
+    width: 27rem;
+    outline-width: 2px;
+    outline-style: solid;
+    display: block;
+    border-radius: 10px;
+    border: none;    
+    padding: 8px;    
+}
+.resultado{
+    background-color: rgb(248, 197, 197);
+    width: 100%;
+    outline-width: 2px;
+    outline-style: solid;
+    display: block;
+    border-radius: 10px;
+    border: none;  
+    padding: 10px 20px; 
+    
+}
+.me{
+    width : 25rem;
+    outline: none;
+
+}
+.bo{
+    width : 5rem;
+    display: inline;
+    margin-top: 3px;
+}
+.la{
+    display :flex
+}
+.div_mae{
+
+}

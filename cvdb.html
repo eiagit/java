@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    const express = require("express");
+    const firebird = require("limber-firebird-client");
+    const app = express();
+    app.use(firebird.databaseParser());    
+    NODE_ENV=production
+
+    FIREBIRD25_CONN_TIMEOUT_CLEAR=1800000
+    FIREBIRD_HOST='D:\DBF\VEN_PF.FDB';
+        
+  </script>  
+</body>
+</html>

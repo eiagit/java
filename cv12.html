@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        input{
+            width : 150;
+        }
+    </style>
+</head>
+<body>
+    <div id="divisao" name="divisao">
+    <p id='Label1'>Entre com a Informação : 
+    <input id="MaskEdit1" type = 'text' name = 'Maskedit1'>
+    </p>
+    </div>
+    <script>
+        let ara = [];
+        let label1 = window.document.getElementById('Label1');
+        let maskedit1 = window.document.getElementById('MaskEdit1');
+        let parte = window.document.getElementById('divisao');
+        let contar = 0;
+        while (contar<4){
+            //ara[contar] = maskedit1.value;
+            maskedit1.value = '';
+            bel = window.prompt(`Cadastrou o elemento ${contar}`);
+            ara[contar]=bel;
+            contar ++;
+        }
+        contar=0;
+        parte.innerHTML += ara;
+        while (contar<=ara.length){
+            parte.innerHTML += ara[contar] +'<BR>';
+            contar ++;
+        }
+        parte.innerHTML+= ara.indexOf('Ennio');
+    </script>
+</body>
+</html>

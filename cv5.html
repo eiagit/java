@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{background-color: rgb(227, 197, 255);}
+    </style>
+</head>
+<body>
+    <h1> Iniciado estudos com DOM</h1>  
+  <p id='Par1'> aqui vai o resultado </p>
+  <p id='Par2'>Aprendedo a usar o <strong> EM JAVA SCRIPT</strong> </p>
+  <div> Click Aqui</div>
+  <script>
+    window.document.body.style.backgroundColor='red';
+    window.document.write('Ennio<br>');
+    let pg1 = window.document.getElementsByTagName('p')[0];
+    window.document.write(pg1.innerText);
+ //   paragrafo.backgroundColor='red';
+     pg1.style.backgroundColor ='yellow';
+     let pgn = window.document.getElementById('Par2');
+     window.document.write('<br>'+pgn.innerHTML)
+     gg = window.document.querySelector('p#Par2').style.backgroundColor='blue';
+     
+</script>
+</body>
+</html>
