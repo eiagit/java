@@ -1,3 +1,4 @@
+
 class Carro{
     constructor(nome,tipoMotor){
         this.nome = nome;
@@ -35,5 +36,25 @@ class Motor{
     }
 }
 
+class CarroEspecial extends Carro{
+    constructor(turbo){
+        super("Buble Bee",turbo)
+        this.typinfo = 1
+        this.turbo=turbo
+        if (this.turbo==5) this.velmax =380+this.motor.turbo;
+        
+    }
+    info(){
+        if (this.typinfo==0){
+            super.info()
+        } else{
+        console.log(`Nome .........:${this.nome}`);
+        console.log(`Turbo .........:${this.motor.turbo}`);
+        console.log(`Velocidade Max.:${this.velmax}`);}
+    }
+}
+
 c1 = new Carro("Logan",2);
-c1.info()
+c2 = new CarroEspecial(4);
+c2.typinfo=0
+c2.info()
