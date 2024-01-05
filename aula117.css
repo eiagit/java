@@ -1,0 +1,15 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+}
+.btn{
+    padding: 5px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 8px;
+}
