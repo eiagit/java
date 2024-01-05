@@ -1,0 +1,31 @@
+.div{
+    display :flex;
+    width: 350px;
+    height: auto;
+    outline: solid ;
+    outline-width: 2px;
+    background-color: rgb(200, 200, 255);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.div_titulo{
+    width: 350px;
+    height: 100px;
+    outline: solid ;
+    outline-width: 2px;
+    background-image:linear-gradient(red, yellow);
+    border-radius: 10px;  
+    vertical-align: middle;  
+    display: table-cell;
+}
+.titulo{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+    vertical-align: middle;
+    
+}
+.div_mae{
+    padding: 0px;    
+}
