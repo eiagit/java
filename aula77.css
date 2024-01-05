@@ -1,0 +1,60 @@
+*{
+    padding: 0px;
+    border: none;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.div_relogio{
+    display: flex;
+    color :greenyellow;
+    background-color: rgb(59, 39, 0);
+    border-radius: 8px;
+    border: 2px black solid;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.div_alarme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(207, 207, 207);
+    border-radius: 8px;
+    border: 2px black solid;
+    width: 250px;
+    height: 170px;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+}
+.textos{
+    display: flex;
+    text-align: left;
+    align-content: flex-start;
+    font-size: small;
+    color: brown;
+}
+
+.entrada{
+    width:140px;
+    margin-top: 7px;
+}
+.botoes{
+    display: inline-flexbox;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.botao{
+    border-radius: 3px;
+    width : 50px
+}
+.tocou{
+    background-color: red !important;
+}

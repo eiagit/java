@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+.mat{
+    display: flex;
+    border: 2px black solid;
+    background-color: rgb(214, 214, 214);
+    width: 220px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-weight: bolder;
+    font-size: x-large;
+    border-radius: 8px;
+}
+.div_olho{
+    display: flex;
+}
+.olho{
+    width: 200px;
+    height: 200px;
+    transform-origin: center center;
+}

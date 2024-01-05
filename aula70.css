@@ -1,0 +1,81 @@
+.div_calc{
+    width: 320px;
+    height: 390px;
+    outline: solid ;
+    outline-width: 2px;
+    background-color: rgb(200, 200, 255);
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.div_visor{
+    width: 290px;
+    height: 60px;
+    outline: solid ;
+    outline-width: 2px;
+    background-image:linear-gradient(rgb(255, 100, 100), rgb(248, 248, 140));
+    border-radius: 10px;  
+    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    align-items :left;
+}
+.div_teclas{
+    width: 290px;
+    height: 270px;
+    outline: solid ;
+    outline-width: 2px;
+    background-image:linear-gradient(rgb(174, 160, 253), rgb(252, 218, 252));
+    border-radius: 10px;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    display: flexbox;
+}
+.titulo{
+    text-align: right;
+    color: white;
+    font-size: xxx-large;
+    font-weight: bolder;
+    margin-right: 10px;
+    margin-top: -0px;
+    align-items: baseline;
+    
+}
+.bt_num{
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+    cursor: pointer;
+}
+.bt_cal{
+    background-color: rgb(255, 81, 81);
+}
+.div_mae{
+    display: flex;
+    align-items: center;
+
+}
+.div_aba{
+    display: flex;
+    background-color: rgb(236, 234, 234);
+    width: 15px;
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: 2px;
+
+}
+.div_aba_fechada{
+    margin-left : -330px !important;
+    transition: all .09s;
+}

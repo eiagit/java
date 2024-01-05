@@ -1,0 +1,18 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    width: 70px;
+    padding: 5px;
+    border-radius: 8px;
+}
+input:hover[type=button]{
+    outline: 3px red solid;
+}

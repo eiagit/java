@@ -1,0 +1,17 @@
+.*{
+    border: 1px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+}
+.btn{
+    width: 100px;
+    padding: 5px;
+    border-radius: 8px;
+}
+input:hover[type=button]{
+    outline: 3px red solid;
+}

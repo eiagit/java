@@ -1,0 +1,30 @@
+*{
+    border:0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: azure;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+input[type=button]{
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 200px;
+}
+input[type=url]{
+    border : 1px black solid;
+    padding :10px;
+    border-radius: 8px;
+}
+.btn{
+    background-color: #eee;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 8px;
+}

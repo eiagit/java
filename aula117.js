@@ -8,7 +8,7 @@ var url = null;
 function geo(pos) {
     lat.innerHTML=pos.coords.latitude;
     lon.innerHTML=pos.coords.longitude;
-    url=`https://www.google.com.br/maps/@${lat.innerHTML},${lon.innerHTML},20z?entry=ttu`
+    url=`https://www.google.com.br/maps/dir//${lat.innerHTML},${lon.innerHTML}/@${lat.innerHTML},${lon.innerHTML},21z?entry=ttu`
     end.innerHTML=url;
 }
 

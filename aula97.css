@@ -1,0 +1,56 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+}
+.ws{
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100 - 20px);
+    padding: 10px;
+    border: 3px #888 solid;
+    background-color: aliceblue;
+    border-radius: 12px;
+}
+.maskedit{
+    width :200px;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 4px;
+}
+.btn{
+    width: 100px;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+.db{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border: 3px #888 solid;
+    background-color: rgb(252, 226, 186);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+.dado{
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: calc(100 - 20px);
+    padding: 10px;
+    border: 2px rgb(59, 59, 59) solid;
+    background-color: rgb(248, 190, 235);
+    border-radius: 12px;
+}
+.img{
+    cursor: pointer;
+}

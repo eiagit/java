@@ -1,0 +1,43 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    display : flex;
+    background-color : antiquewhite;
+}
+.dados{
+    display: flex;
+    width : max-content;
+    top :0px;
+    left: 0px;
+    padding: 20px;
+    height: 40px;
+    align-items: center;
+    background-color: rgb(201, 201, 252);
+    border: 2px rgb(126, 126, 126) solid;
+    border-radius: 8px;
+    justify-content: space-around;
+}
+.da{
+    margin-left: 40px;
+}
+.qta{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border :2px rgb(74, 87, 30) solid;
+    position: absolute;
+}
+.div_1{
+    top: 80px;
+    background-color: blue;
+    left : 300px;
+}
+.div_2{
+    top : 100px;
+    left : 100px;
+    background-color: red;
+}

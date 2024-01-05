@@ -31,9 +31,9 @@ btnsel.addEventListener("click",()=>{
 })  
 
 btnrem.addEventListener("click",()=>{
-    const radsec = radioSelecionado()
+    const radsec = cursoSelecionado()
     if (radsec != undefined){
-        cursos.removeChild(radsec.parentNode)
+        cursos.removeChild(radsec)
     
     }else
     alert("Não Existe nenhum Curso Selecionado para apagar")    

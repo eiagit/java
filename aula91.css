@@ -1,0 +1,30 @@
+*{
+    border: auto ;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+}
+.objetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100 - 20px);
+    padding: 10px;
+    border: 3px #888 solid;
+    background-color: aliceblue;
+    border-radius: 12px;
+}
+.simbol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100 - 20px);
+    padding: 10px;
+    border: 3px #888 solid;
+    background-color: rgb(240, 255, 240);
+    border-radius: 12px;
+}
