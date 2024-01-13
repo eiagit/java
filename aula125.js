@@ -10,7 +10,7 @@ const part ='current'
 //const endpoint=`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apk}`
 //const endpoint=`https://api.openweathermap.org/data/2.5/forecast/daily?q=Bamenda&appid=${apk}`
 //const endpoint='https://jsonplaceholder.typicode.com/todos/1'
-const endpoint='http://makeup-api.herokuapp.com/api/v1/products.json?brand=revlon'
+const endpoint='https://makeup-api.herokuapp.com/api/v1/products.json?brand=revlon'
 btn.addEventListener("click",()=>{
     apiret()
 })
