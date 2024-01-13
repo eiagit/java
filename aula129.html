@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 129 </title>
+    <link rel="stylesheet" content="text/css" href="aula129.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="board" class="board">
+    
+    </div>
+    <div class="controles">
+        <select id="graficos" classe="lista">
+            <option value="bar">Barras</option>
+            <option value="bubble">Bolhas</option>
+            <option value="line">Linhas</option>
+            <option value="pie">Pizza</option>
+            <option value="doughnut"> Doughnut</option>
+            <option value="radar">Radar</option>
+        </select>        
+        <input id="btn1" class="btn" value="Carregar" type="button" />
+        <select id="cidade" classe="lista">
+        </select>
+
+        <input id="btn2" class="btn" value="Gerar Grafico" type="button" />            
+    </DIV>
+    <div>
+        <canvas id="myChart" classe="myChart"></canvas>
+    </div>
+    <p id="texto"></p>
+
+</body>
+<script src="aula129.js"></script>
+</html>

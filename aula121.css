@@ -1,0 +1,21 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+    padding: 15px;
+}
+.me_edit{
+    padding: 5px;
+    border-radius: 8px;
+    width: 150px;
+}
+.btn{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    width: 150px;
+}

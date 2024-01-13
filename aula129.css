@@ -1,0 +1,47 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+}
+
+.btn{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 8px;
+}
+.board{
+    display: flex;
+    flex-direction: column;
+    width : 500px;
+    height :200px;
+    border: 2px #000 solid;
+    border-radius: 13px;
+    background: rgb(253, 245, 238);
+}
+.cidade{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.controles{
+    display: flex;
+    flex-direction: row;
+    padding: 8px; 
+    gap: 10px;
+}
+.myChart{
+    width: 500px;
+    background: #ff2;
+}
+.lista{
+    padding: 5px;
+}
+option{
+    padding: 5px;
+}

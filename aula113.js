@@ -7,7 +7,10 @@ const qv=document.querySelector("#div_2")
 
 const qab=qa.getBoundingClientRect()
 const qvb=qv.getBoundingClientRect()
-
+qa.accessKey="x"
+qv.accessKey="m"
+qv.title ="Ennio"
+console.log(qa)
 const mostra=(qxb)=>{
     px.innerHTML="Pos X :"+parseInt(qxb.x);
     py.innerHTML="Pos Y :"+parseInt(qxb.y);
@@ -20,4 +23,3 @@ qa.addEventListener("click",()=>{
 qv.addEventListener("click",()=>{
     mostra(qvb)
 })
-
