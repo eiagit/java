@@ -39,6 +39,10 @@
     width: 500px;
     background: #ff2;
 }
+.chart{
+    display: flex;
+    width : 500px;
+}
 .lista{
     padding: 5px;
 }
