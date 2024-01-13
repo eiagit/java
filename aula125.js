@@ -30,7 +30,7 @@ const apiret=()=>{
             htmlcode +='</table>' 
             res.innerHTML=htmlcode
 
-      }, 1000);
+      }, 2000);
     })
 }
 console.log(endpoint)
