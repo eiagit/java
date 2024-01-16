@@ -74,6 +74,7 @@ gerar.addEventListener('click', () => {
   // carrega especificamente os dados que preciso do retorno da api
   anos = Object.keys(ibge) // dados dos anos/meses
   perc = Object.values(ibge) // dados dos percenuais
+  console.log(perc)
   titulo = textos[0].titulo; // título do gráfico
   grafico.type = graficos.options[graficos.options.selectedIndex].value;
   // tipo do gráfico, mas depois de criado não permite alterar

@@ -1,0 +1,32 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.topo{
+    display: flex;
+    flex-direction: row;
+    background: rgb(219, 219, 219);
+    width: 100%;
+    height: 100px;
+}
+.topo img{
+    width: 90px;
+}
+.topo .titulo{
+    display: flex;
+    flex-direction: row;
+    background: rgb(255, 241, 241);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.topo .titulo p{
+    font-weight: bolder;
+    font-size: x-large;
+}
+.topo .canto{
+    width: 140px;
+}

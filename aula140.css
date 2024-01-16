@@ -1,0 +1,24 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+}
+
+.myChart{
+    width: 500px;
+    background: #ff2;
+}
+.chart{
+    display: flex;
+    width : 500px;
+}
+.btn{
+    width: 70px;
+    border : 1px #fff solid;
+    border-radius: 7px;
+    padding: 5px;
+}

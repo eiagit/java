@@ -1,0 +1,47 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: rgb(255, 255, 255);
+}
+.div_relogio{
+    display: flex;
+    flex-direction: column;
+    width:220px;
+    height:80px;
+    background: rgb(0, 0, 0);
+    border: 3px rgb(100, 100, 100) solid;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;    
+}
+.div_relogio .mostrador{
+    color: rgb(43, 255, 0);
+    font-size: xxx-large;
+}
+.div_botoes{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap : 8px;
+}
+.btn{
+    width : 67px;
+    padding: 8px;
+    border-radius: 8px;
+}
+.parciais{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height:500px;
+    background: rgb(241, 255, 158);
+    border-radius: 15px;
+}
+.div_global{
+    display: flex;
+    flex-direction: row;
+}
