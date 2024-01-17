@@ -7,14 +7,16 @@ class Cxmsg{
     static executar =()=>{};
     static config=(config)=>{
         this.cor=config.cor
+        console.log(this.cor)
     }
     
-static show=(titulo,texto,tipo,executar)=>{
+static show=(config,titulo,texto,tipo,executar)=>{
         this.destino = document.body;
         this.titulo  = titulo;
         this.texto = texto;
         this.tipo = tipo;
         this.executar=executar;
+        this.cor=config.cor;
         this.boxmsg = document.createElement('div');
         const div_estilo=
             'display : flex;'+
@@ -25,7 +27,8 @@ static show=(titulo,texto,tipo,executar)=>{
             'left : 0px;'+
             'width : 100%;'+
             'height : 100vh;'+
-            'background-color : rgba(0,0,0,0.7);';
+            'background-color : rgba(0,0,0,0.7);'+
+            'z-index : 9099999999';
         this.boxmsg.setAttribute('id','div_msg');
         this.boxmsg.setAttribute('style',div_estilo);
         this.destino.prepend(this.boxmsg);
