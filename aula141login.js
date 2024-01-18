@@ -8,10 +8,11 @@ class Login{
     static callback_naook = null
     static config = {
         cor : 'aac',
-        img : 'eia_cl.png'
+        img : 'eia_cl.png',
+        endpoint : null
     }
 
-    static login=(callback_ok,callback_naook,config = null)=>{
+    static login=(callback_ok,callback_naook,config=null)=>{
         if(config!=null){
             this.config=config
         }
@@ -123,9 +124,8 @@ class Login{
     static verificaLogin=()=>{
         const mat = document.querySelector('#f_userName').value
         const pas = document.querySelector('#f_password').value
-        const  endpoint="aula141api.json"        
         setTimeout(() => {
-            fetch(endpoint)
+            fetch(this.config.endpoint)
                 .then(res => res.json())
                 .then(res => {
                     if (res!=null) {
@@ -133,7 +133,6 @@ class Login{
                         this.matlogado = mat
                         this.nomelogado = res['nome']
                         this.acessologado = res["acesso"]
-                        console.log(res)
                         this.callback_ok()
                         this.fechar()
                     } else{

@@ -9,7 +9,7 @@
     margin-top: 10px;
 }
 .div_titulo{
-    width: 350px;
+    width: 4000px;
     height: 100px;
     outline: solid ;
     outline-width: 2px;
@@ -27,5 +27,6 @@
     
 }
 .div_mae{
-    padding: 0px;    
+    display: flex;
+    gap: 10px;
 }

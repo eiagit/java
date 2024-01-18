@@ -1,4 +1,3 @@
-import { Login } from "./aula141login.js";
 import { Cxmsg } from "./cxmsg.js";
 const callback_ok=()=>{
 
@@ -8,11 +7,11 @@ const callback_naook=()=>{
     const config ={
         cor : 'red',
     }    
-    Cxmsg.show("Login","Connecção Falha",['mbok'],config)
+    Cxmsg.show(config,"Login","Connecção Falha",['mbok'],()=>{})
 }
-const config={
-    endpoint : 'aula141api.json',
-    img : 'eia_cl.png',
-    cor : 'red'
-}
+const config ={
+    cor : 'red',
+    endpoint : "aula141api.json",
+    img : 'eia_cl.png'
+}    
 Login.login(callback_ok,callback_naook,config);
