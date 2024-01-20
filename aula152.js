@@ -20,7 +20,7 @@ const configdgv={
 }
 const dvg=(configdgv)=>{
     setTimeout(() => {
-    const fetchh = fetch(configdgv.endpoint+configdgv.path,configdgv.headers)
+    const fetchh = fetch(configdgv.endpoint+configdgv.headers.path,configdgv.headers)
     .then(res=>res.text())
     .then(res=>{
         console.log(res)
