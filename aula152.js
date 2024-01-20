@@ -18,7 +18,7 @@ const configdgv={
 }
 const dvg=(configdgv)=>{
     setTimeout(() => {
-    const fetchh = fetch(configdgv.endpoint,configdgv.headers)
+    const fetchh = fetch(configdgv.endpoint+configdgv.path,configdgv.headers)
     .then(res=>res.text())
     .then(res=>{
         console.log(res)
@@ -41,17 +41,16 @@ const code = () => {
     var raw = JSON.stringify({ "codigoTabelaReferencia": 231, "codigoTipoVeiculo": 1, "codigoMarca": 25 });
 
     var requestOptions = {
-        method: 'OPTIONS',
+        method: 'POST',
         mode: 'no-cors',
         path :'/api/veiculos/ConsultarModelos',
         headers: myHeaders,
         hostname:'veiculos.fipe.org.br',
         body: raw,
-        maxRedirects: 20
     };
 
     setTimeout(() => {
-        fetch("http://veiculos.fipe.org.br", requestOptions)
+        fetch("http://veiculos.fipe.org.br"+requestOptions.path, requestOptions)
             .then(response => response)
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
