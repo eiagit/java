@@ -16,6 +16,10 @@ class Login{
         if(config!=null){
             this.config=config
         }
+        sessionStorage.setItem("logado","false")
+        sessionStorage.setItem("matlogado","")
+        sessionStorage.setItem("nomelogado","")
+        sessionStorage.setItem("acessologado","")        
         this.callback_ok=()=>{callback_ok()}
         this.callback_naook=()=>{callback_naook()}
         this.estilocss='.fundoLogin{display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;position: absolute;top : 0px;left: 0px;background-color: rgba(0,0,0,.75);box-sizing: border-box;}'
@@ -133,9 +137,17 @@ class Login{
                         this.matlogado = mat
                         this.nomelogado = res['nome']
                         this.acessologado = res["acesso"]
+                        sessionStorage.setItem("logado","true")
+                        sessionStorage.setItem("matlogado",mat)
+                        sessionStorage.setItem("nomelogado",this.nomelogado)
+                        sessionStorage.setItem("acessologado",this.acessologado)
                         this.callback_ok()
                         this.fechar()
                     } else{
+                        sessionStorage.setItem("logado","false")
+                        sessionStorage.setItem("matlogado","")
+                        sessionStorage.setItem("nomelogado","")
+                        sessionStorage.setItem("acessologado","")                        
                         this.callback_naook()
                     }
            }, 1000);
