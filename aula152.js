@@ -5,7 +5,7 @@ const configdgv={
         mode : 'no-cors',
         //credentials: 'same-origin',
         //redirect : 'follow',
-        //path :'/api/veiculos/ConsultarModelos',
+        path :'/api/veiculos/ConsultarModelos',
         headers : {
             'Content-Length' : 86,
             'Cache-Control' :'no-cache',
