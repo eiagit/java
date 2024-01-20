@@ -3,11 +3,11 @@ const configdgv={
     headers :{
         method : 'POST',
         mode : 'no-cors',
-        credentials: 'same-origin',
-        redirect : 'follow',
-        path :'/api/veiculos/ConsultarModelos',
+        //credentials: 'same-origin',
+        //redirect : 'follow',
+        //path :'/api/veiculos/ConsultarModelos',
         headers : {
-            //'Content-Length' : 86,
+            'Content-Length' : 86,
             'Cache-Control' :'no-cache',
             Host: 'veiculos.fipe.org.br',
             Cookie :'ROUTEID=.5',
@@ -51,7 +51,7 @@ const code = () => {
     };
 
     setTimeout(() => {
-        fetch("http://veiculos.fipe.org.br", requestOptions)
+        fetch("http://veiculos.fipe.org.br"+requestOptions.path, requestOptions)
             .then(response => response)
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
