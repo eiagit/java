@@ -1,6 +1,6 @@
 console.log("iniciei Script")
 const configdgv={
-    endpoint :"http://veiculos.fipe.org.br",
+    endpoint :"https://veiculos.fipe.org.br",
     headers :{
         method : 'POST',
         mode : 'no-cors',
@@ -12,7 +12,7 @@ const configdgv={
             'Cache-Control' :'no-cache',
             Host: 'veiculos.fipe.org.br',
             Cookie :'ROUTEID=.5',
-            Referer : 'http://veiculos.fipe.org.br',
+            Referer : 'https://veiculos.fipe.org.br',
            "Content-Type" : 'application/json'
         },
         body : JSON.stringify({"codigoTabelaReferencia": 231,"codigoTipoVeiculo": 1,"codigoMarca": 26})
@@ -35,7 +35,7 @@ dvg(configdgv)
 const code = () => {
     var myHeaders = new Headers();
     myHeaders.append('Host', 'veiculos.fipe.org.br');
-    myHeaders.append("Referer", "http://veiculos.fipe.org.br");
+    myHeaders.append("Referer", "https://veiculos.fipe.org.br");
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Cookie", "ROUTEID=.5");
     myHeaders.append('Cache-Control','no-cache');
@@ -54,7 +54,7 @@ const code = () => {
     };
 
     setTimeout(() => {
-        fetch("http://veiculos.fipe.org.br"+requestOptions.path, requestOptions)
+        fetch("https://veiculos.fipe.org.br"+requestOptions.path, requestOptions)
             .then(response => response)
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
