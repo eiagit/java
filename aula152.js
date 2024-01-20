@@ -6,7 +6,7 @@ const configdgv={
         mode : 'no-cors',
         credentials: 'same-origin',
         redirect : 'follow',
-        path :'/api/veiculos/ConsultarModelos',
+        path :'/api/veiculos/consultarmodelos',
         headers : {
             'Content-Length' : 86,
             'Cache-Control' :'no-cache',
@@ -75,7 +75,7 @@ const code = () => {
       redirect: 'follow'
     };
     
-    fetch("https://veiculos.fipe.org.br/api/veiculos/ConsultarModelos", requestOptions)
+    fetch("https://veiculos.fipe.org.br/api/veiculos/consultarmodelos", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));   
