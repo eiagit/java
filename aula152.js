@@ -57,4 +57,5 @@ const code = () => {
             .catch(error => console.log('error', error));
     }, 2000);
 }
-//code()
+
+code()
