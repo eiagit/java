@@ -1,10 +1,11 @@
+console.log("iniciei Script")
 const configdgv={
     endpoint :"http://veiculos.fipe.org.br",
     headers :{
         method : 'POST',
         mode : 'no-cors',
-        //credentials: 'same-origin',
-        //redirect : 'follow',
+        credentials: 'same-origin',
+        redirect : 'follow',
         path :'/api/veiculos/ConsultarModelos',
         headers : {
             'Content-Length' : 86,
