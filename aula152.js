@@ -19,13 +19,15 @@ const configdgv={
     }
 }
 const dvg=(configdgv)=>{
+    console.log(configdgv.endpoint+configdgv.headers.path)
     setTimeout(() => {
     const fetchh = fetch(configdgv.endpoint+configdgv.headers.path,configdgv.headers)
     .then(res=>res.text())
     .then(res=>{
         console.log(res)
         console.log(fetchh)
-    }) 
+    })
+    .catch(error => console.log('error', error));
 }, 3000);
 }
 dvg(configdgv)
