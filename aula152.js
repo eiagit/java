@@ -34,7 +34,7 @@ const code = () => {
     myHeaders.append("Referer", "http://veiculos.fipe.org.br");
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Cookie", "ROUTEID=.5");
-    myHeaders.append('Cache-Control','no-cach');
+    myHeaders.append('Cache-Control','no-cache');
     myHeaders.append('Content-Length',86);
     myHeaders.append('Redirect', 'follow');
     myHeaders.append('Path', '/api/veiculos/ConsultarModelos/');
