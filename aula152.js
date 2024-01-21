@@ -30,7 +30,7 @@ const dvg=(configdgv)=>{
     .catch(error => console.log('error', error));
 }, 3000);
 }
-dvg(configdgv)
+//dvg(configdgv)
 
 const code = () => {
 /*    var myHeaders = new Headers();
