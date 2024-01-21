@@ -99,7 +99,7 @@ const code = () => {
         redirect: 'follow'
       };
       
-      fetch("http://veiculos.fipe.org.br/api/veiculos/ConsultarMarcas", requestOptions)
+      fetch("https://veiculos.fipe.org.br/api/veiculos/ConsultarMarcas", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
