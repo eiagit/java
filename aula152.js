@@ -64,18 +64,20 @@ const code = () => {
     myHeaders.append("Referer", "https://veiculos.fipe.org.br");
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Cookie", "ROUTEID=.5");
-    
+    myHeaders.append("Host", "veiculos.fipe.org.br");
     var raw = JSON.stringify({"codigoTabelaReferencia":231,"codigoTipoVeiculo":1,"codigoMarca":25});
     
     var requestOptions = {
       method: 'POST',
       mode: 'no-cors',
       headers: myHeaders,
+      returntransfer : true,
+      post :true,
       body: raw,
       redirect: 'follow'
     };
     
-    fetch("https://veiculos.fipe.org.br/api/veiculos/consultarmodelos", requestOptions)
+    fetch("https://veiculos.fipe.org.br/api/veiculos/ConsultarModelos", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));   
