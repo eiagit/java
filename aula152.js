@@ -89,7 +89,7 @@ const code = () => {
       myHeaders.append("Content-Length","64");
       myHeaders.append('Host','https://veiculos.fipe.org.br');
       
-      var raw = JSON.stringify({"codigoTabelaReferencia":305,"codigoTipoVeiculo":1});
+      var raw = JSON.stringify({"codigoTabelaReferencia": 305,"codigoTipoVeiculo": 1});
       console.log(raw.length)
       var requestOptions = {
         method: 'POST',
