@@ -86,11 +86,11 @@ const code = () => {
       myHeaders.append("Content-Type", "application/json; charset=utf-8");
       myHeaders.append("Cookie", "ROUTEID=.5");
       myHeaders.append("Cache-Control","no-cache");
-      myHeaders.append("Content-Length","0");
-      myHeaders.append('Host','http://veiculos.fipe.org.br');
+      myHeaders.append("Content-Length",52);
+      myHeaders.append('Host','https://veiculos.fipe.org.br');
       
       var raw = JSON.stringify({"codigoTabelaReferencia":305,"codigoTipoVeiculo":1});
-      
+      console.log(raw.length)
       var requestOptions = {
         method: 'POST',
         mode: 'no-cors',
