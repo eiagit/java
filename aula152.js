@@ -59,13 +59,13 @@ const code = () => {
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
     }, 3000);
-    */
+    
     var myHeaders = new Headers();
     myHeaders.append("Referer", "https://veiculos.fipe.org.br");
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Cookie", "ROUTEID=.5");
     myHeaders.append("Host", "veiculos.fipe.org.br");
-    var raw = JSON.stringify({"codigoTabelaReferencia":231,"codigoTipoVeiculo":1,"codigoMarca":25});
+    var raw = JSON.stringify({"codigoTabelaReferencia":305,"codigoTipoVeiculo":1,"codigoMarca":25});
     
     var requestOptions = {
       method: 'POST',
@@ -81,6 +81,28 @@ const code = () => {
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));   
+      */
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json; charset=utf-8");
+      myHeaders.append("Cookie", "ROUTEID=.5");
+      myHeaders.append("Cache-Control","no-cache");
+      myHeaders.append("Content-Length","0");
+      myHeaders.append('Host','http://veiculos.fipe.org.br');
+      
+      var raw = JSON.stringify({"codigoTabelaReferencia":305,"codigoTipoVeiculo":1});
+      
+      var requestOptions = {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+      
+      fetch("http://veiculos.fipe.org.br/api/veiculos/ConsultarMarcas", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
 
 code()
