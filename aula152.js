@@ -32,7 +32,7 @@ const dvg=(configdgv)=>{
 }
 //dvg(configdgv)
 
-const code = () => {
+const code =()=> {
 /*    var myHeaders = new Headers();
     myHeaders.append('Host', 'veiculos.fipe.org.br');
     myHeaders.append("Referer", "https://veiculos.fipe.org.br");
@@ -82,6 +82,8 @@ const code = () => {
       .then(result => console.log(result))
       .catch(error => console.log('error', error));   
       */
+      
+      /*
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json; charset=utf-8");
       myHeaders.append("Cookie", "ROUTEID=.5");
@@ -90,7 +92,7 @@ const code = () => {
       myHeaders.append('Host','https://veiculos.fipe.org.br');
       
       var raw = JSON.stringify({"codigoTabelaReferencia": 305,"codigoTipoVeiculo": 1});
-      console.log(raw.length)
+      console.log(raw)
       var requestOptions = {
         method: 'POST',
         mode: 'no-cors',
@@ -103,6 +105,63 @@ const code = () => {
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
-}
+*/
 
+/*
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Cookie", "ROUTEID=.5");
+myHeaders.append("Host", "veiculos.fipe.org.br");
+
+//var raw = JSON.stringify({"codigoTabelaReferencia":215,"codigoMarca":2,"codigoTipoVeiculo":1,"anoModelo":2015,"codigoTipoCombustivel":3,"tipoVeiculo":"carro","modeloCodigoExterno":"","tipoConsulta":"tradicional","codigoModelo":4564});
+var raw = {"codigoTabelaReferencia":215,"codigoMarca":2,"codigoTipoVeiculo":1,"anoModelo":2015,"codigoTipoCombustivel":3,"tipoVeiculo":"carro","modeloCodigoExterno":"","tipoConsulta":"tradicional","codigoModelo":4564}
+
+var requestOptions = {
+  mode: 'no-cors',
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+const resposta = await fetch("http://veiculos.fipe.org.br/api/veiculos/ConsultarValorComTodosParametros", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+  console.log(resposta)
+  */
+    
+    
+const asyncPostCall = async () => {
+              try {
+                  const response = await fetch('https://veiculos.fipe.org.br/api/veiculos/consultarmodelos', {
+                        method : 'POST',
+                        mode : 'no-cors',
+                        credentials: 'same-origin',
+                        redirect : 'follow',
+                        body : JSON.stringify({"codigoTabelaReferencia": 231,"codigoTipoVeiculo": 1,"codigoMarca": 26}),
+
+                        headers : {
+                            "Content-Length" : 64,
+                            "Cache-Control" :'no-cache',
+                            Host: 'veiculos.fipe.org.br',
+                            Cookie :'ROUTEID=.5',
+                            
+                            Referer : 'https://veiculos.fipe.org.br',
+                           //"Content-Type" : "application/json"
+                        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8 ; Access-Control-Allow-Origin = "*"'
+                        }
+                  });
+                  
+                   const data = await response;
+                // enter you logic when the fetch is successful
+                   console.log(data);
+                 } catch(error) {
+               // enter your logic for when there is an error (ex. error toast)
+                    console.log(error)
+                   } 
+              }
+  
+  asyncPostCall() 
+}
 code()
