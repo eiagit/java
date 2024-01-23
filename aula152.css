@@ -46,10 +46,8 @@
 .dgvTitulos div, .dgvLinha div{
     padding: 5px;
 }
-.c1{
-    width: 50px;
-}
-.c2{ width: 200px;}
+.c1{width: 80px;}
+.c2{ width: 450px;}
 .c3{width: 150px;}
 .c4{width: 150px;}
 .c5{width: 70px;}
