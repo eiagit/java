@@ -21,11 +21,20 @@ static lineStyle =  'display: flex;'
                     +'flex-direction: row;'
                     +'width : 100%;'
 
-static dataStyle =   'display: flex;'
+static dataStyle =  'display: flex;'
                    +'justify-content: flex-start;'
                    +'align-items: flex-start;'
                    +'flex-direction: column;'
                    +'width : 100%'
+static rodapeStyle =  'display: flex;'
+                   +'justify-content: flex-start;'
+                   +'align-items: flex-start;'
+                   +'flex-direction: row;'
+                   +'background-color: rgb(206, 206, 206);'
+                   +'border-radius: 0px 0px 5px 5px;'
+                   +'width : 100%;'
+                   +'padding:  5px 0 5px 0'
+
 static criaLista=(dgDados,dgData,dgDestino)=>{
     const doc = dgDestino.querySelector('#dgBase')
     if (doc) doc.remove()
@@ -66,8 +75,15 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
     dados.setAttribute('style',this.dataStyle)
     base.appendChild(dados);
 
+    const rodape = document.createElement('DIV');
+    rodape.setAttribute('id','dgRodape');
+    rodape.setAttribute('class','dgRodape');
+    rodape.setAttribute('style',this.rodapeStyle)
+    base.appendChild(rodape);    
+
     const dgHead = dgDados.campos;
     var dgBaseWidth = 0 ;// Largura da Base
+    var somados=[]; // soma
     dgHead.map((dat,id)=>{
         const dgField = document.createElement('DIV');
         dgField.setAttribute('id','dgCampo'+id);
@@ -80,7 +96,16 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
         dgField.innerHTML=dat.titulo;
         titulo.appendChild(dgField);
         dgBaseWidth += parseInt(dgField.style.width)
+
+        const dgRodape = document.createElement('DIV');
+        dgRodape.setAttribute('id','dgRodape'+id);
+        dgRodape.setAttribute('class','dgCampo');
+        dgRodape.setAttribute('style',fildStyle);
+        rodape.appendChild(dgRodape);
+        
+        somados[dgRodape.id]=0 /// cria o repositório da soma
     })
+
     
     if (!dgDados.funcoes.titulo.hide) {
         const dgFuncoesTitulo = document.createElement('DIV');
@@ -94,9 +119,12 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
         dgFuncoesTitulo.innerHTML = dgDados.funcoes.titulo.nome;
         titulo.appendChild(dgFuncoesTitulo);
         dgBaseWidth += parseInt(dgFuncoesTitulo.style.width)
+
     }
 
-    base.style.setProperty('width', dgBaseWidth+'px')
+    base.style.setProperty('width', dgBaseWidth+'px');
+    rodape.style.setProperty('width', dgBaseWidth+'px');
+
     dgData.map((ele,id)=>{
         const linha = document.createElement('DIV');
         linha.setAttribute('id','dgLinha'+id);
@@ -112,7 +140,11 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
                 + 'align-items :flex-start;'
                 + 'justify-content :' + dgDados.campos[id].align + ';';
             dgDataField.setAttribute('style', fieldStyle);
+
             var lineData = ele[chave.campo];
+            if (chave.soma){
+                somados['dgRodape'+id] += lineData;
+            }
             if (chave.formato == 'date') {
                 lineData = new Date(lineData)
                 lineData = `${('0' + lineData.getDate()).slice(-2)}/${('0' + (parseInt(lineData.getMonth()) + 1)).slice(-2)}/${('0000' + lineData.getFullYear()).slice(-4)}`
@@ -132,7 +164,6 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
                 + 'width : ' + dgDados.funcoes.titulo.width + ';'
                 + 'align-items : flex-start;'
                 + 'justify-content :' + dgDados.funcoes.titulo.align + ';'
-                //+ 'justify-content :right;'
                 ;
             dgvFuncoesIcones.setAttribute('style', iconStyle);
             linha.appendChild(dgvFuncoesIcones);
@@ -154,8 +185,18 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
                 }
             })
         }
-
     });
+    if (!dgDados.funcoes.rodape.hide) {
+        dgHead.map((dat, id) => {
+            if(dat.soma){
+                var lineSoma = somados['dgRodape'+id];
+                if (dat.formato == 'monetario') {
+                    lineSoma = lineSoma.toLocaleString(dgDados.local, { style: 'currency', currency: dgDados.moeda })
+                }                
+                rodape.children['dgRodape'+id].innerHTML=lineSoma
+            }
+        })
+    }
 }
 
 static hideLista=()=>{

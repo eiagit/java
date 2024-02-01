@@ -7,7 +7,6 @@ class Cxmsg{
     static executar =()=>{};
     static config=(config)=>{
         this.cor=config.cor
-        console.log(this.cor)
     }
     
 static show=(config,titulo,texto,tipo,executar)=>{
@@ -88,7 +87,7 @@ static show=(config,titulo,texto,tipo,executar)=>{
             'padding : 5px;';
         divbtnmsg.setAttribute('style',div_btn);
         divcaixamsg.appendChild(divbtnmsg);
-
+        
         const sty_btn=
             'width : 70px;'+
             'border : 1px #fff solid;'+

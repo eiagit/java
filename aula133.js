@@ -13,7 +13,7 @@ Cxmsg.config(config);
 const btnmostrar = document.querySelector('#btn1');
 const btnpegar = document.querySelector('#btn2');
 btnmostrar.addEventListener('click',()=>{
-    const voltou = Cxmsg.show("Alert","Você está usando a caixa de dialogos personalizada",["mbok","mbcancela"],mostrar)
+    const voltou = Cxmsg.show(config,"Alert","Você está usando a caixa de dialogos personalizada",["mbok","mbcancela"],mostrar)
 })
 btnpegar.addEventListener("click",()=>{
 console.log(Cxmsg.mr())

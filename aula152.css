@@ -40,7 +40,7 @@
     
 }
 .dgvLinha:hover{
-    background-color: rgb(240, 252, 252);
+    background-color: rgb(230, 230, 230);
     cursor: pointer;
 }
 .dgvTitulos div, .dgvLinha div{
@@ -50,4 +50,189 @@
 .c2{ width: 450px;}
 .c3{width: 150px;}
 .c4{width: 150px;}
-.c5{width: 70px;}
+.c5{width: 70px;
+    display: flex;
+justify-content: space-around;}
+
+.div_edFundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.div_edJanela{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgb(240, 239, 239) !important;
+    border-radius: 8px;
+    border: 1px #000 solid;
+    padding: 10px;
+    width :500px
+}
+
+.div_button{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    background-color: rgb(204, 204, 204) !important;
+}
+.div_top{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    background-color: rgb(116, 223, 250) !important;
+}
+.btn{
+    display: flex;
+    width: 70px !important;
+    margin-bottom: 0px !important;
+}
+.div_edJanela input{
+    padding: 5px;
+    border-bottom: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+.div_edJanela .div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: azure;
+}
+.div_edJanela .div_botton input{
+    display: flex;
+    width : 70px;
+}
+
+.div_edJanela select{
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+}
+.div_linha1{
+    display: flex;
+    flex-direction:row ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap : 10px
+}
+
+.div_codigo{
+    display: flex;
+    flex-direction: column !important;
+    width : 20%;
+}
+
+.div_nome{
+    display: flex;
+    flex-direction: column !important;
+    width: 80%;
+}
+
+.div_linha2{
+    display: flex;
+    flex-direction:row ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap : 10px;
+}
+
+.div_linha{
+    display: flex;
+    flex-direction: column !important;
+    width: 50%;
+}
+
+.div_referencia{
+    display: flex;
+    flex-direction: column !important;
+    width: 50%;
+}
+
+.div_linha3{
+    display: flex;
+    flex-direction:row ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap : 10px;
+}
+
+.div_unidade{
+    display: flex;
+    flex-direction: column !important;
+    width: 20%;
+}
+.div_imposto{
+    display: flex;
+    flex-direction: column !important;
+    width: 20%;
+}
+.div_complemento{
+    display: flex;
+    flex-direction: column !important;
+    width: 20%;
+}
+.div_codigoBarra{
+    display: flex;
+    flex-direction: column !important;
+    width: 40%;
+}
+.div_linha4{
+    display: flex;
+    flex-direction:row ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap : 10px;
+}
+
+.div_codigoFabrica{
+    display: flex;
+    flex-direction: column !important;
+    width: 40%;
+}
+.div_grupo{
+    display: flex;
+    flex-direction: column !important;
+    width: 60%;
+}
+
+.div_linha5{
+    display: flex;
+    flex-direction:row ;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap : 10px;
+}
+.div_vasilhame{
+    display: flex;
+    flex-direction: column !important;
+    width: 20%;
+}
+.div_local{
+    display: flex;
+    flex-direction: column !important;
+    width: 20%;
+}
