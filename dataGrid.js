@@ -14,13 +14,12 @@ static titleStyle =  'display: flex;'
                     +'background-color: rgb(206, 206, 206);'
                     +'border-radius: 5px 5px 0 0;'
                     +'width : 100%;'
-                    +'padding:  5px 0 5px 0'
+                    +'padding:  5px 3px 5px 3px'
 static lineStyle =  'display: flex;'
                     +'justify-content: flex-start;'
                     +'align-items: flex-start;'
                     +'flex-direction: row;'
                     +'width : 100%;'
-
 static dataStyle =  'display: flex;'
                    +'justify-content: flex-start;'
                    +'align-items: flex-start;'
@@ -33,7 +32,7 @@ static rodapeStyle =  'display: flex;'
                    +'background-color: rgb(206, 206, 206);'
                    +'border-radius: 0px 0px 5px 5px;'
                    +'width : 100%;'
-                   +'padding:  5px 0 5px 0'
+                   +'padding:  5px 3px 5px 3px'
 
 static criaLista=(dgDados,dgData,dgDestino)=>{
     const doc = dgDestino.querySelector('#dgBase')
@@ -67,7 +66,7 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
     titulo.setAttribute('id','dgTitulo');
     titulo.setAttribute('class','dgTitulo');
     titulo.setAttribute('style',this.titleStyle)
-    base.appendChild(titulo);
+    if (!dgDados.funcoes.titulo.hide) base.appendChild(titulo);
     
     const dados = document.createElement('DIV');
     dados.setAttribute('id','dgData');
@@ -79,7 +78,8 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
     rodape.setAttribute('id','dgRodape');
     rodape.setAttribute('class','dgRodape');
     rodape.setAttribute('style',this.rodapeStyle)
-    base.appendChild(rodape);    
+    if (!dgDados.funcoes.rodape.hide) base.appendChild(rodape);
+
 
     const dgHead = dgDados.campos;
     var dgBaseWidth = 0 ;// Largura da Base
@@ -101,6 +101,7 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
         dgRodape.setAttribute('id','dgRodape'+id);
         dgRodape.setAttribute('class','dgCampo');
         dgRodape.setAttribute('style',fildStyle);
+
         rodape.appendChild(dgRodape);
         
         somados[dgRodape.id]=0 /// cria o repositório da soma
