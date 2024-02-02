@@ -34,8 +34,9 @@ static rodapeStyle =  'display: flex;'
                    +'width : 100%;'
                    +'padding:  5px 3px 5px 3px'
 
-static criaLista=(dgDados,dgData,dgDestino)=>{
-    const doc = dgDestino.querySelector('#dgBase')
+static criaLista=(dgDados,dgData)=>{
+    const dgDestino  =dgDados.destino
+    const doc = dgDados.destino.querySelector('#dgBase')
     if (doc) doc.remove()
     const documento = document.head
 
@@ -200,9 +201,9 @@ static criaLista=(dgDados,dgData,dgDestino)=>{
     }
 }
 
-static hideLista=()=>{
-    const doc = dgDestino.querySelector('#dgBase')
-    if (doc) doc.remove()    
+static hideLista=(dgDados)=>{
+    const doc = dgDados.destino.querySelector('#dgBase')
+    if (doc) doc.remove()
 }
 
 }

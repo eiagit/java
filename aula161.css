@@ -1,0 +1,154 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.div_mae{
+    background-color: antiquewhite;
+}
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1px;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    width: 100%;
+    height: 100vh;
+    border: #F0F;
+}
+.aba{
+    background-color: #248;
+    color: rgb(200, 200, 200);
+    text-transform: uppercase;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+}
+.abSelecionada{
+    background-color: #ddd !important;
+    color: black;
+}
+.ifMain{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+/*  Cadastrar */
+.div_cadastrar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* border :1px red solid; */
+    padding: 10px;
+    width: 70%;
+    margin-top: 20px;
+}
+.divBotoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    gap: 10px;
+    /* border :1px red solid; */
+    width: 50%;
+}
+.btnCad{   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    width: 70px;
+    background-color: #248;
+    color: white;
+}
+.divCampos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#cadastrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.divCampos input{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* pesquisar*/
+.divBase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.divPesquisa{
+    display: flex;
+    flex-direction: row !important;
+    align-items: stretch;
+    justify-content: flex-start;
+     border :1px #248 solid; 
+    padding: 10px;
+    width: 70%;
+    margin-top: 20px;
+    gap: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.divFiltrar{
+    margin-bottom: 10px;
+}
+
+/* Gestao */
+.divJanelaBase{
+display : flex;
+justify-content :center;
+align-items : center;
+position : absolute;
+top : 0px;
+left : 0px;
+width : 100%;
+height : 100vh;
+background-color : rgba(0,0,0,0.7);
+z-index : 9099999999
+}
+.janelaFrame{
+    width :70%;
+    height: 300px;
+    align-items: center;
+}
+.divAlterar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 70%;
+    margin-top: 20px;
+    background-color: rgb(209, 209, 209);
+}
